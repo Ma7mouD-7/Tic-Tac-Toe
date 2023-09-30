@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lined"
+    android:backgroundTint="@color/cell"
+    android:backgroundTintMode="multiply"
+    tools:context=".PlaygroundActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/play_player_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pencil_srb"
+            android:text="@string/player_1"
+            android:textAlignment="center"
+            android:textColor="@color/font"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/play_opponent_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pencil_srb"
+            android:text="@string/player_2"
+            android:textAlignment="center"
+            android:textColor="@color/font"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/score_border_hor"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:contentDescription="@string/border"
+        android:requiresFadingEdge="vertical"
+        android:rotation="1"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.52"
+        app:srcCompat="@drawable/border_horizontal"
+        app:tint="@color/font" />
+
+    <ImageView
+        android:id="@+id/play_border_ver_4"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/border"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:rotation="-3"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/score_border_hor"
+        app:layout_constraintStart_toStartOf="@+id/score_border_hor"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3"
+        app:srcCompat="@drawable/border_vertical"
+        app:tint="@color/font" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/play_player_score_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pencil_srb"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/font"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/play_opponent_score_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pencil_srb"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/font"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/play_layout_1_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/blah_blah_bang"
+        android:gravity="center"
+        android:text="@string/x"
+        android:textAlignment="center"
+        android:textColor="@color/player_1_font"
+        android:textSize="@dimen/cell_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/play_border_hor_1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/play_border_ver_1"
+        app:layout_constraintStart_toStartOf="@+id/play_space"
+        app:layout_constraintTop_toTopOf="@+id/play_space" />
+
+    <TextView
+        android:id="@+id/play_layout_2_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/blah_blah_bang"
+        android:gravity="center"
+        android:text="@string/o"
+        android:textAlignment="center"
+        android:textColor="@color/player_2_font"
+        android:textSize="@dimen/cell_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/play_border_hor_1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/play_border_ver_2"
+        app:layout_constraintStart_toEndOf="@+id/play_border_ver_1"
+        app:layout_constraintTop_toTopOf="@+id/play_space" />
+
+    <TextView
+        android:id="@+id/play_layout_3_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/blah_blah_bang"
+        android:gravity="center"
+        android:text="@string/x"
+        android:textAlignment="center"
+        android:textColor="@color/player_1_font"
+        android:textSize="@dimen/cell_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/play_border_hor_1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/play_space"
+        app:layout_constraintStart_toEndOf="@+id/play_border_ver_2"
+        app:layout_constraintTop_toTopOf="@+id/play_space" />
+
+
+    <TextView
+        android:id="@+id/play_layout_4_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/blah_blah_bang"
+        android:gravity="center"
+        android:text="@string/o"
+        android:textAlignment="center"
+        android:textColor="@color/player_2_font"
+        android:textSize="@dimen/cell_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/play_border_hor_2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/play_border_ver_1"
+        app:layout_constraintStart_toStartOf="@+id/play_space"
+        app:layout_constraintTop_toBottomOf="@+id/play_border_hor_1" />
+
+    <TextView
+        android:id="@+id/play_layout_5_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/border_width"
+        android:layout_weight="1"
+        android:fontFamily="@font/blah_blah_bang"
+        android:gravity="center"
+        android:text="@string/x"
+        android:textAlignment="center"
+        android:textColor="@color/player_1_font"
+        android:textSize="@dimen/cell_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/play_border_hor_2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/play_border_ver_2"
+        app:layout_constraintStart_toEndOf="@+id/play_border_ver_1"
+        app:layout_constraintTop_toBottomOf="@+id/play_border_hor_1" />
+
+    <TextView
+        android:id="@+id/play_layout_6_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/blah_blah_bang"
+        android:gravity="center"
+        android:text="@string/o"
+        android:textAlignment="center"
+        android:textColor="@color/player_2_font"
+        android:textSize="@dimen/cell_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/play_border_hor_2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/play_space"
+        app:layout_constraintStart_toEndOf="@+id/play_border_ver_2"
+        app:layout_constraintTop_toBottomOf="@+id/play_border_hor_1" />
+
+
+    <TextView
+        android:id="@+id/play_layout_7_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/blah_blah_bang"
+        android:gravity="center"
+        android:text="@string/x"
+        android:textAlignment="center"
+        android:textColor="@color/player_1_font"
+        android:textSize="@dimen/cell_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/play_space"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/play_border_ver_1"
+        app:layout_constraintStart_toStartOf="@+id/play_space"
+        app:layout_constraintTop_toBottomOf="@+id/play_border_hor_2" />
+
+    <TextView
+        android:id="@+id/play_layout_8_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/blah_blah_bang"
+        android:gravity="center"
+        android:text="@string/o"
+        android:textAlignment="center"
+        android:textColor="@color/player_2_font"
+        android:textSize="@dimen/cell_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/play_space"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/play_border_ver_2"
+        app:layout_constraintStart_toEndOf="@+id/play_border_ver_1"
+        app:layout_constraintTop_toBottomOf="@+id/play_border_hor_2" />
+
+    <TextView
+        android:id="@+id/play_layout_9_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/blah_blah_bang"
+        android:gravity="center"
+        android:text="@string/x"
+        android:textAlignment="center"
+        android:textColor="@color/player_1_font"
+        android:textSize="@dimen/cell_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/play_space"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/play_space"
+        app:layout_constraintStart_toEndOf="@+id/play_border_ver_2"
+        app:layout_constraintTop_toBottomOf="@+id/play_border_hor_2" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play_new_btn"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/crosshatcher"
+        android:text="@string/new_round"
+        android:textColor="@color/font"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/play_border_ver_1"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/border"
+        android:rotation="1"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/play_space"
+        app:layout_constraintEnd_toEndOf="@+id/play_space"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="@+id/play_space"
+        app:layout_constraintTop_toTopOf="@+id/play_space"
+        app:srcCompat="@drawable/border_vertical"
+        app:tint="@color/font" />
+
+    <ImageView
+        android:id="@+id/play_border_ver_2"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/border"
+        android:rotation="1.5"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/play_space"
+        app:layout_constraintEnd_toEndOf="@+id/play_space"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="@+id/play_space"
+        app:layout_constraintTop_toTopOf="@+id/play_space"
+        app:srcCompat="@drawable/border_vertical"
+        app:tint="@color/font" />
+
+    <ImageView
+        android:id="@+id/play_border_hor_1"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/border"
+        android:rotation="1"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/play_space"
+        app:layout_constraintEnd_toEndOf="@+id/play_space"
+        app:layout_constraintStart_toStartOf="@+id/play_space"
+        app:layout_constraintTop_toTopOf="@+id/play_space"
+        app:layout_constraintVertical_bias="0.315"
+        app:srcCompat="@drawable/border_horizontal"
+        app:tint="@color/font" />
+
+    <ImageView
+        android:id="@+id/play_border_hor_2"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/border"
+        android:rotation="0"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/play_space"
+        app:layout_constraintEnd_toEndOf="@+id/play_space"
+        app:layout_constraintStart_toStartOf="@+id/play_space"
+        app:layout_constraintTop_toTopOf="@+id/play_space"
+        app:layout_constraintVertical_bias="0.675"
+        app:srcCompat="@drawable/border_horizontal"
+        app:tint="@color/font" />
+
+    <TextView
+        android:id="@+id/play_result_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/kg_ten_thousand_reasons_r1ll"
+        android:rotation="2"
+        android:text="@string/result"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/font"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <Space
+        android:id="@+id/play_space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_result_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

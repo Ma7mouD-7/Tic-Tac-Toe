@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#705195</color>
+    <color name="purple_500">#69409A</color>
+    <color name="purple_700">#3A2A68</color>
+    <color name="teal_200">#8C1E1E</color>
+    <color name="teal_700">#641E1E</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="border">#1F1F1F</color>
+    <color name="cell">#393939</color>
+    <color name="font">#B7B7B7</color>
+    <color name="player_1_font">#80FF0000</color>
+    <color name="player_2_font">#CCBB86FC</color>
+    <color name="tint">#7E7E7E</color>
+</resources>
